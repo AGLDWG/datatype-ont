@@ -1,7 +1,7 @@
 # baseURI: http://linked.data.gov.au/def/datatype
-# imports: file:///LocI-Resources/cache-external/doap.rdf
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://topbraid.org/schema/
+# imports: http://usefulinc.com/ns/doap
 # imports: http://www.w3.org/ns/prov-o#
 
 @prefix data: <http://linked.data.gov.au/def/datatype/> .
@@ -20,24 +20,27 @@
   dct:created "2019-03-25"^^xsd:date ;
   dct:creator [
       a sdo:Person ;
-      sdo:email "simon.cox@csiro.au" ;
-      sdo:identifier <https://orcid.org/0000-0002-3884-3420> ;
-      sdo:memberOf [
+      sdo:affiliation [
           a sdo:Organization ;
           sdo:identifier <http://catalogue.linked.data.gov.au/def/csiro> ;
+          sdo:identifier <https://ror.org/03qn8fb07> ;
+          sdo:mainEntityOfPage <https://www.csiro.au/> ;
           sdo:name "CSIRO" ;
         ] ;
+      sdo:email "simon.cox@csiro.au" ;
+      sdo:identifier <https://orcid.org/0000-0002-3884-3420> ;
+      sdo:mainEntityOfPage <https://people.csiro.au/C/S/simon-cox> ;
       sdo:name "Simon J.D.Cox" ;
     ] ;
   dct:description """A set of classes representing data-types. 
-These may be used for observation results, or for other applications where scaled numbers, ranges, percents etc are required. """ ;
+These may be used for observation results, or for the range of specific properties in other applications where scaled numbers, ranges, percents etc are required. """ ;
   dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
   dct:modified "2019-10-01"^^xsd:date ;
   rdfs:comment "Datatype classes" ;
   rdfs:label "Datatypes" ;
-  owl:imports <file:///LocI-Resources/cache-external/doap.rdf> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://topbraid.org/schema/> ;
+  owl:imports <http://usefulinc.com/ns/doap> ;
   owl:imports <http://www.w3.org/ns/prov-o#> ;
   skos:historyNote """Originally developed for use as the value of an observation result (sosa:hasResult) in the context of the TERN-plot ontology. 
 
@@ -50,7 +53,7 @@ However, objects from these classes may appear in many contexts. """ ;
 .
 data:Boolean
   a owl:Class ;
-  rdfs:label "Result true-or-false" ;
+  rdfs:label "true-or-false" ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom xsd:boolean ;
@@ -61,6 +64,7 @@ data:Boolean
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:value ;
     ] ;
+  skos:definition "Class to encapsulate boolean values" ;
 .
 data:Concept
   a owl:Class ;
@@ -80,10 +84,11 @@ data:Concept
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty rdf:value ;
     ] ;
+  skos:definition "Class to encapsulate values from controlled vocabularies" ;
 .
 data:Count
   a owl:Class ;
-  rdfs:label "Result integer" ;
+  rdfs:label "integer" ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom xsd:integer ;
@@ -99,6 +104,7 @@ data:Count
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:uncertainty ;
     ] ;
+  skos:definition "Class to encapsulate integer values" ;
 .
 data:Percent
   a owl:Class ;
@@ -114,6 +120,7 @@ data:Percent
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:uncertainty ;
     ] ;
+  skos:definition "Class to encapsulate quantitative measure in percent values" ;
 .
 data:PercentRange
   a owl:Class ;
@@ -129,6 +136,7 @@ data:PercentRange
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:uncertainty ;
     ] ;
+  skos:definition "Class to encapsulate quantitative range in percent values" ;
 .
 data:QuantitativeMeasure
   a owl:Class ;
@@ -153,6 +161,7 @@ data:QuantitativeMeasure
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:uncertainty ;
     ] ;
+  skos:definition "Class to encapsulate quantitative measure values" ;
 .
 data:QuantitativeRange
   a owl:Class ;
@@ -177,10 +186,11 @@ data:QuantitativeRange
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:uncertainty ;
     ] ;
+  skos:definition "Class to encapsulate quantitative range values" ;
 .
 data:Text
   a owl:Class ;
-  rdfs:label "Result expressed as text" ;
+  rdfs:label "text" ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom xsd:string ;
@@ -191,6 +201,7 @@ data:Text
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:value ;
     ] ;
+  skos:definition "Class to encapsulate text values" ;
 .
 data:max
   a owl:DatatypeProperty ;
