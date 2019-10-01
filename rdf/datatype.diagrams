@@ -9,60 +9,6 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >60</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >198</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >251</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >432</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/PercentRange"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >60</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >198</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >42</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >166</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/Count"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:selectedResource rdf:resource="http://linked.data.gov.au/def/datatype/QuantitativeRange"/>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >167</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >45</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >441</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/Boolean"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >60</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >198</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >239</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >167</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/Percent"/>
-      </cd:URINode>
-    </cd:nodes>
-    <rdfs:label>types Diagram</rdfs:label>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >76</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >198</cd:width>
@@ -71,6 +17,47 @@
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >45</cd:x>
         <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/QuantitativeMeasure"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:BNode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >17</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >298</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >320</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >73</cd:x>
+        <cd:hostPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <cd:hostClass rdf:resource="http://linked.data.gov.au/def/datatype/Percent"/>
+        <cd:expression>data:unit value &lt;http://qudt.org/vocab/unit/PERCENT&gt;</cd:expression>
+      </cd:BNode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >453</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >375</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >156</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/Concept"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >60</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >198</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >251</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >432</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/PercentRange"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -89,31 +76,31 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
+        >60</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >453</cd:width>
+        >198</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >375</cd:y>
+        >239</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >156</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/Concept"/>
+        >167</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/Percent"/>
       </cd:URINode>
     </cd:nodes>
+    <cd:selectedResource rdf:resource="http://linked.data.gov.au/def/datatype/QuantitativeRange"/>
     <cd:nodes>
-      <cd:BNode>
+      <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >17</cd:height>
+        >60</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >298</cd:width>
+        >198</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >338</cd:y>
+        >42</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >399</cd:x>
-        <cd:hostPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <cd:hostClass rdf:resource="http://linked.data.gov.au/def/datatype/PercentRange"/>
-        <cd:expression>data:unit value &lt;http://qudt.org/vocab/unit/PERCENT&gt;</cd:expression>
-      </cd:BNode>
+        >166</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/Count"/>
+      </cd:URINode>
     </cd:nodes>
+    <rdfs:label>types Diagram</rdfs:label>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -128,17 +115,30 @@
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >167</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >45</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >441</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/datatype/Boolean"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
       <cd:BNode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >17</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >298</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >320</cd:y>
+        >338</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >73</cd:x>
+        >399</cd:x>
         <cd:hostPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <cd:hostClass rdf:resource="http://linked.data.gov.au/def/datatype/Percent"/>
+        <cd:hostClass rdf:resource="http://linked.data.gov.au/def/datatype/PercentRange"/>
         <cd:expression>data:unit value &lt;http://qudt.org/vocab/unit/PERCENT&gt;</cd:expression>
       </cd:BNode>
     </cd:nodes>
