@@ -15,34 +15,28 @@
         <dd><code>http://linked.data.gov.au/def/datatype</code></dd>
         <dt>Creator(s)</dt>
         <dd>
-            <a href="https://orcid.org/0000-0002-3884-3420">Simon J.D.Cox</a> (<a href="mailto:simon.cox@csiro.au">simon.cox@csiro.au</a>) of <a href="http://catalogue.linked.data.gov.au/def/csiro">CSIRO</a><br/>
+            <a href="https://orcid.org/0000-0002-3884-3420">Simon J.D.Cox</a> (<a href="mailto:simon.cox@csiro.au">simon.cox@csiro.au</a>)<br/>
         </dd>
         <dt>Created</dt>
         <dd>2019-03-25</dd>
         <dt>Modified</dt>
-        <dd>2019-10-01</dd>
+        <dd>2019-10-03</dd>
         <dt>Imports</dt>
         <dd>
-            <a href="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</a><br/>
-            <a href="http://usefulinc.com/ns/doap">http://usefulinc.com/ns/doap</a><br/>
             <a href="http://www.w3.org/ns/prov-o#">http://www.w3.org/ns/prov-o#</a><br/>
+            <a href="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</a><br/>
             <a href="http://topbraid.org/schema/">http://topbraid.org/schema/</a><br/>
+            <a href="http://usefulinc.com/ns/doap">http://usefulinc.com/ns/doap</a><br/>
         </dd>
         <dt>License</dt>
         <dd><a href="http://creativecommons.org/publicdomain/zero/1.0/">http://creativecommons.org/publicdomain/zero/1.0/</a></dd>
         <dt>Ontology Source</dt>
-        <dd><a href="datatype.ttl">RDF (turtle)</a></dd>
-        <dt>Code Repository</dt>
-        <dd><a href="https://github.com/AGLDWG/datatype-ont">https://github.com/AGLDWG/datatype-ont</a></dd>
+        <dd><a href="whocares.ttl">RDF (text/turtle)</a></dd>
     </dl>
     <h2>Description</h2>
     <div id="description">
-        <p>A set of classes representing data-types.
-These may be used for observation results, or for the range of specific properties in other applications where scaled numbers, ranges, percents etc are required. </p>
+        <p>Datatype classes</p>
     </div>
-    <p><strong>History Note:</strong> Originally developed for use as the value of an observation result (sosa:hasResult) in the context of the TERN-plot ontology.
-
-However, objects from these classes may appear in many contexts. </p>
 </section>
 <section id="toc">
     <h2>Table of Contents</h2>
@@ -63,17 +57,17 @@ However, objects from these classes may appear in many contexts. </p>
 <section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#classifier">Classifier</a></li>
+        <li><a href="#boolean">Boolean</a></li>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#count">Count</a></li>
+        <li><a href="#percent">Percent</a></li>
+        <li><a href="#percentrange">Percent range</a></li>
         <li><a href="#quantitativemeasure">Quantitative Measure</a></li>
         <li><a href="#quantitativerange">Quantitative Range</a></li>
-        <li><a href="#quantitativemeasureinpercent">Quantitative measure in percent</a></li>
-        <li><a href="#quantitativerangeinpercent">Quantitative range in percent</a></li>
-        <li><a href="#integer">integer</a></li>
-        <li><a href="#text">text</a></li>
-        <li><a href="#true-or-false">true-or-false</a></li>
+        <li><a href="#text">Text</a></li>
     </ul>
-    <div class="entity class" id="true-or-false">
-        <h3>true-or-false<sup title="class" class="type-c">c</sup></h3>
+    <div class="entity class" id="boolean">
+        <h3>Boolean<sup title="class" class="type-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -82,20 +76,20 @@ However, objects from these classes may appear in many contexts. </p>
             <tr>
                 <th>Description</th>
                 <td>
-                    Class to encapsulate boolean values
+                    Class to encapsulate a true-or-false value
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#simplevalue(aliteral)">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#simplevalue(aliteral)">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="classifier">
-        <h3>Classifier<sup title="class" class="type-c">c</sup></h3>
+    <div class="entity class" id="concept">
+        <h3>Concept<sup title="class" class="type-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -104,21 +98,21 @@ However, objects from these classes may appear in many contexts. </p>
             <tr>
                 <th>Description</th>
                 <td>
-                    Class to encapsulate values from controlled vocabularies
+                    Class to encapsulate a classifier, usually a values from a controlled vocabulary
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
                     <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#sourcevocabulary">data:vocabulary</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a> <span class="cardinality">only</span> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#vocabulary">data:vocabulary</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="integer">
-        <h3>integer<sup title="class" class="type-c">c</sup></h3>
+    <div class="entity class" id="count">
+        <h3>Count<sup title="class" class="type-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -127,21 +121,21 @@ However, objects from these classes may appear in many contexts. </p>
             <tr>
                 <th>Description</th>
                 <td>
-                    Class to encapsulate integer values
+                    Class to encapsulate an integer value
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#simplevalue(aliteral)">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#uncertaintyforquantitativevalues">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#simplevalue(aliteral)">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a> <sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="quantitativemeasureinpercent">
-        <h3>Quantitative measure in percent<sup title="class" class="type-c">c</sup></h3>
+    <div class="entity class" id="percent">
+        <h3>Percent<sup title="class" class="type-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -150,7 +144,7 @@ However, objects from these classes may appear in many contexts. </p>
             <tr>
                 <th>Description</th>
                 <td>
-                    Class to encapsulate quantitative measure in percent values
+                    Class to encapsulate a quantitative measure expressed as a percent value
                 </td>
             </tr>
             <tr>
@@ -162,14 +156,14 @@ However, objects from these classes may appear in many contexts. </p>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#uncertaintyforquantitativevalues">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">value</span> <a href="http://qudt.org/vocab/unit/PERCENT">http://qudt.org/vocab/unit/PERCENT</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="quantitativerangeinpercent">
-        <h3>Quantitative range in percent<sup title="class" class="type-c">c</sup></h3>
+    <div class="entity class" id="percentrange">
+        <h3>Percent range<sup title="class" class="type-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -178,7 +172,7 @@ However, objects from these classes may appear in many contexts. </p>
             <tr>
                 <th>Description</th>
                 <td>
-                    Class to encapsulate quantitative range in percent values
+                    Class to encapsulate a quantitative range expressed as in percent values
                 </td>
             </tr>
             <tr>
@@ -190,8 +184,8 @@ However, objects from these classes may appear in many contexts. </p>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#uncertaintyforquantitativevalues">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">value</span> <a href="http://qudt.org/vocab/unit/PERCENT">http://qudt.org/vocab/unit/PERCENT</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
         </table>
@@ -206,22 +200,22 @@ However, objects from these classes may appear in many contexts. </p>
             <tr>
                 <th>Description</th>
                 <td>
-                    Class to encapsulate quantitative measure values
+                    Class to encapsulate a quantitative measure value
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#simplevalue(aliteral)">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#simplevalue(aliteral)">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a> <sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#uncertaintyforquantitativevalues">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#quantitativemeasureinpercent">data:Percent</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#percent">data:Percent</a> <sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -236,28 +230,28 @@ However, objects from these classes may appear in many contexts. </p>
             <tr>
                 <th>Description</th>
                 <td>
-                    Class to encapsulate quantitative range values
+                    Class to encapsulate a quantitative range 
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#maximumvalueofrange">data:max</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#minimumvalueofrange">data:min</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#dataminimum">data:min</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#datamaximum">data:max</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#uncertaintyforquantitativevalues">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#quantitativerangeinpercent">data:PercentRange</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#percentrange">data:PercentRange</a> <sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
     <div class="entity class" id="text">
-        <h3>text<sup title="class" class="type-c">c</sup></h3>
+        <h3>Text<sup title="class" class="type-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -266,14 +260,14 @@ However, objects from these classes may appear in many contexts. </p>
             <tr>
                 <th>Description</th>
                 <td>
-                    Class to encapsulate text values
+                    Class to encapsulate a textual value
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#simplevalue(aliteral)">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a> <sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#simplevalue(aliteral)">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
         </table>
@@ -282,16 +276,22 @@ However, objects from these classes may appear in many contexts. </p>
 <section id="objectproperties">
     <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#measurementstandard,scale,uom,controlledvocabulary,taxonomyetc">Measurement standard, scale, uom, controlled vocabulary, taxonomy etc</a></li>
+        <li><a href="#datastandard">data standard</a></li>
         <li><a href="#unitofmeasure">unit of measure</a></li>
-        <li><a href="#sourcevocabulary">source vocabulary</a></li>
+        <li><a href="#vocabulary">vocabulary</a></li>
     </ul>
-    <div class="entity property" id="measurementstandard,scale,uom,controlledvocabulary,taxonomyetc">
-        <h3>Measurement standard, scale, uom, controlled vocabulary, taxonomy etc<sup title="object property" class="type-op">op</sup></h3>
+    <div class="entity property" id="datastandard">
+        <h3>data standard<sup title="object property" class="type-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/datatype/standard</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Measurement standard, scale, uom, reference system, controlled vocabulary, taxonomy etc
+                </td>
             </tr>
         </table>
     </div>
@@ -303,24 +303,36 @@ However, objects from these classes may appear in many contexts. </p>
                 <td><code>http://linked.data.gov.au/def/datatype/unit</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    Measurement scale 
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="#measurementstandard,scale,uom,controlledvocabulary,taxonomyetc">data:standard</a> <sup class="sup-op" title="object property">op</sup>
+                    <a href="#datastandard">data:standard</a> <sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="sourcevocabulary">
-        <h3>source vocabulary<sup title="object property" class="type-op">op</sup></h3>
+    <div class="entity property" id="vocabulary">
+        <h3>vocabulary<sup title="object property" class="type-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/datatype/vocabulary</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    controlled vocabulary, taxonomy etc 
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="#measurementstandard,scale,uom,controlledvocabulary,taxonomyetc">data:standard</a> <sup class="sup-op" title="object property">op</sup>
+                    <a href="#datastandard">data:standard</a> <sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -338,19 +350,25 @@ However, objects from these classes may appear in many contexts. </p>
 <section id="datatypeproperties">
     <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#maximumvalueofrange">Maximum value of range</a></li>
-        <li><a href="#minimumvalueofrange">Minimum value of range</a></li>
-        <li><a href="#uncertaintyforquantitativevalues">Uncertainty for quantitative values</a></li>
-        <li><a href="#simplevalue(aliteral)">simple value (a literal)</a></li>
+        <li><a href="#datamaximum">data maximum</a></li>
+        <li><a href="#dataminimum">data minimum</a></li>
+        <li><a href="#datauncertainty">data uncertainty</a></li>
+        <li><a href="#datavalue">data value</a></li>
     </ul>
-    <div class="entity property" id="maximumvalueofrange">
-        <h3>Maximum value of range<sup title="datatype property" class="type-dp">dp</sup></h3>
+    <div class="entity property" id="datamaximum">
+        <h3>data maximum<sup title="datatype property" class="type-dp">dp</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/datatype/max</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    Maximum value of a range
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a>
@@ -364,14 +382,20 @@ However, objects from these classes may appear in many contexts. </p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="minimumvalueofrange">
-        <h3>Minimum value of range<sup title="datatype property" class="type-dp">dp</sup></h3>
+    <div class="entity property" id="dataminimum">
+        <h3>data minimum<sup title="datatype property" class="type-dp">dp</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/datatype/min</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    Minimum value of range
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a>
@@ -385,14 +409,20 @@ However, objects from these classes may appear in many contexts. </p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="uncertaintyforquantitativevalues">
-        <h3>Uncertainty for quantitative values<sup title="datatype property" class="type-dp">dp</sup></h3>
+    <div class="entity property" id="datauncertainty">
+        <h3>data uncertainty<sup title="datatype property" class="type-dp">dp</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/datatype/uncertainty</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    Uncertainty for a quantitative value
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a>
@@ -406,12 +436,18 @@ However, objects from these classes may appear in many contexts. </p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="simplevalue(aliteral)">
-        <h3>simple value (a literal)<sup title="datatype property" class="type-dp">dp</sup></h3>
+    <div class="entity property" id="datavalue">
+        <h3>data value<sup title="datatype property" class="type-dp">dp</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/datatype/value</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    simple value (a literal)
+                </td>
             </tr>
             <tr>
                 <th>Super-properties</th>
@@ -442,6 +478,8 @@ However, objects from these classes may appear in many contexts. </p>
         <dt>rdfs</dt>
         <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
         <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>sdo1</dt>
         <dd><code>http://schema.org/</code></dd>
         <dt>skos</dt>
         <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
@@ -451,16 +489,16 @@ However, objects from these classes may appear in many contexts. </p>
         <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
     </dl>
 </section>
-    <section id="legend">
-        <h2>Legend</h2>
-        <table class="entity">
-            <tr><td><sup class="type-c" title="Classes">c</sup></td><td>Classes</td></tr>
-            <tr><td><sup class="type-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
-            <tr><td><sup class="type-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
-            <tr><td><sup class="type-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
-            <tr><td><sup class="type-p" title="Properties">p</sup></td><td>Properties</td></tr>
-            <tr><td><sup class="type-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
-        </table>
-    </section>
+    <div id="legend">
+    <h2>Legend</h2>
+    <table class="entity">
+        <tr><td><sup class="type-c" title="Classes">c</sup></td><td>Classes</td></tr>
+        <tr><td><sup class="type-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+        <tr><td><sup class="type-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+        <tr><td><sup class="type-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+        <tr><td><sup class="type-p" title="Properties">p</sup></td><td>Properties</td></tr>
+        <tr><td><sup class="type-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+    </table>
+    </div>
 </body>
 </html>
