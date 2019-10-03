@@ -35,7 +35,8 @@
     </dl>
     <h2>Description</h2>
     <div id="description">
-        <p>Datatype classes</p>
+        <p>A set of classes representing data-types. 
+These may be used for observation results, or for the range of specific properties in other applications where scaled numbers, ranges, percents etc are required. </p>
     </div>
 </section>
 <section id="toc">
@@ -104,9 +105,9 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="#vocabulary">data:vocabulary</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a> <span class="cardinality">only</span> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> <sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#vocabulary">data:vocabulary</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
         </table>
@@ -128,8 +129,8 @@
                 <th>Restrictions</th>
                 <td>
                     <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
         </table>
@@ -184,8 +185,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">value</span> <a href="http://qudt.org/vocab/unit/PERCENT">http://qudt.org/vocab/unit/PERCENT</a> <sup class="sup-c" title="class">c</sup><br/>
                     <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">value</span> <a href="http://qudt.org/vocab/unit/PERCENT">http://qudt.org/vocab/unit/PERCENT</a> <sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -206,10 +207,10 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a> <sup class="sup-c" title="class">c</sup><br/>
                     <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -236,10 +237,10 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#dataminimum">data:min</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#datamaximum">data:max</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#dataminimum">data:min</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#datamaximum">data:max</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -266,8 +267,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a> <sup class="sup-c" title="class">c</sup><br/>
                     <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a> <sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
