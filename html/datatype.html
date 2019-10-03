@@ -15,7 +15,7 @@
         <dd><code>http://linked.data.gov.au/def/datatype</code></dd>
         <dt>Creator(s)</dt>
         <dd>
-            <a href="https://orcid.org/0000-0002-3884-3420">Simon J.D.Cox</a> (<a href="mailto:simon.cox@csiro.au">simon.cox@csiro.au</a>)<br/>
+            <a href="https://orcid.org/0000-0002-3884-3420">Simon J.D.Cox</a> (<a href="mailto:simon.cox@csiro.au">simon.cox@csiro.au</a>) of <a href="https://ror.org/03qn8fb07">CSIRO</a><br/>
         </dd>
         <dt>Created</dt>
         <dd>2019-03-25</dd>
@@ -23,21 +23,26 @@
         <dd>2019-10-03</dd>
         <dt>Imports</dt>
         <dd>
-            <a href="http://www.w3.org/ns/prov-o#">http://www.w3.org/ns/prov-o#</a><br/>
             <a href="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</a><br/>
             <a href="http://topbraid.org/schema/">http://topbraid.org/schema/</a><br/>
+            <a href="http://www.w3.org/ns/prov-o#">http://www.w3.org/ns/prov-o#</a><br/>
             <a href="http://usefulinc.com/ns/doap">http://usefulinc.com/ns/doap</a><br/>
         </dd>
         <dt>License</dt>
         <dd><a href="http://creativecommons.org/publicdomain/zero/1.0/">http://creativecommons.org/publicdomain/zero/1.0/</a></dd>
         <dt>Ontology Source</dt>
-        <dd><a href="whocares.ttl">RDF (text/turtle)</a></dd>
+        <dd><a href="datatype.ttl">RDF (turtle)</a></dd>
+        <dt>Code Repository</dt>
+        <dd><a href="https://github.com/AGLDWG/datatype-ont">https://github.com/AGLDWG/datatype-ont</a></dd>
     </dl>
     <h2>Description</h2>
     <div id="description">
         <p>A set of classes representing data-types. 
 These may be used for observation results, or for the range of specific properties in other applications where scaled numbers, ranges, percents etc are required. </p>
     </div>
+    <p><strong>History Note:</strong> Originally developed for use as the value of an observation result (sosa:hasResult) in the context of the TERN-plot ontology. 
+
+However, objects from these classes may appear in many contexts. </p>
 </section>
 <section id="toc">
     <h2>Table of Contents</h2>
@@ -105,9 +110,9 @@ These may be used for observation results, or for the range of specific properti
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#vocabulary">data:vocabulary</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a> <span class="cardinality">only</span> <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#vocabulary">data:vocabulary</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
         </table>
@@ -128,9 +133,9 @@ These may be used for observation results, or for the range of specific properti
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a> <sup class="sup-c" title="class">c</sup><br/>
                     <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
         </table>
@@ -207,10 +212,10 @@ These may be used for observation results, or for the range of specific properti
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a> <sup class="sup-c" title="class">c</sup><br/>
                     <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a> <sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#datavalue">data:value</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -239,8 +244,8 @@ These may be used for observation results, or for the range of specific properti
                 <td>
                     <a href="#unitofmeasure">data:unit</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#datauncertainty">data:uncertainty</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#dataminimum">data:min</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#datamaximum">data:max</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#dataminimum">data:min</a> <sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -479,8 +484,6 @@ These may be used for observation results, or for the range of specific properti
         <dt>rdfs</dt>
         <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
         <dt>sdo</dt>
-        <dd><code>https://schema.org/</code></dd>
-        <dt>sdo1</dt>
         <dd><code>http://schema.org/</code></dd>
         <dt>skos</dt>
         <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
@@ -490,16 +493,16 @@ These may be used for observation results, or for the range of specific properti
         <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
     </dl>
 </section>
-    <div id="legend">
-    <h2>Legend</h2>
-    <table class="entity">
-        <tr><td><sup class="type-c" title="Classes">c</sup></td><td>Classes</td></tr>
-        <tr><td><sup class="type-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
-        <tr><td><sup class="type-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
-        <tr><td><sup class="type-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
-        <tr><td><sup class="type-p" title="Properties">p</sup></td><td>Properties</td></tr>
-        <tr><td><sup class="type-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
-    </table>
-    </div>
+    <section id="legend">
+        <h2>Legend</h2>
+        <table class="entity">
+            <tr><td><sup class="type-c" title="Classes">c</sup></td><td>Classes</td></tr>
+            <tr><td><sup class="type-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+            <tr><td><sup class="type-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+            <tr><td><sup class="type-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+            <tr><td><sup class="type-p" title="Properties">p</sup></td><td>Properties</td></tr>
+            <tr><td><sup class="type-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+        </table>
+    </section>
 </body>
 </html>
