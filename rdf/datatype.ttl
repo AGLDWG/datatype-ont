@@ -35,7 +35,7 @@
   dct:description """A set of classes representing data-types. 
 These may be used for observation results, or for the range of specific properties in other applications where scaled numbers, ranges, percents etc are required. """ ;
   dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-  dct:modified "2019-10-01"^^xsd:date ;
+  dct:modified "2019-10-03"^^xsd:date ;
   rdfs:comment "Datatype classes" ;
   rdfs:label "Datatypes" ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
@@ -53,7 +53,7 @@ However, objects from these classes may appear in many contexts. """ ;
 .
 data:Boolean
   a owl:Class ;
-  rdfs:label "true-or-false" ;
+  rdfs:label "Boolean" ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom xsd:boolean ;
@@ -64,11 +64,11 @@ data:Boolean
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:value ;
     ] ;
-  skos:definition "Class to encapsulate boolean values" ;
+  skos:definition "Class to encapsulate a true-or-false value" ;
 .
 data:Concept
   a owl:Class ;
-  rdfs:label "Classifier" ;
+  rdfs:label "Concept" ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom skos:Concept ;
@@ -84,11 +84,11 @@ data:Concept
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty rdf:value ;
     ] ;
-  skos:definition "Class to encapsulate values from controlled vocabularies" ;
+  skos:definition "Class to encapsulate a classifier, usually a values from a controlled vocabulary" ;
 .
 data:Count
   a owl:Class ;
-  rdfs:label "integer" ;
+  rdfs:label "Count" ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom xsd:integer ;
@@ -104,11 +104,11 @@ data:Count
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:uncertainty ;
     ] ;
-  skos:definition "Class to encapsulate integer values" ;
+  skos:definition "Class to encapsulate an integer value" ;
 .
 data:Percent
   a owl:Class ;
-  rdfs:label "Quantitative measure in percent" ;
+  rdfs:label "Percent" ;
   rdfs:subClassOf data:QuantitativeMeasure ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -120,11 +120,11 @@ data:Percent
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:uncertainty ;
     ] ;
-  skos:definition "Class to encapsulate quantitative measure in percent values" ;
+  skos:definition "Class to encapsulate a quantitative measure expressed as a percent value" ;
 .
 data:PercentRange
   a owl:Class ;
-  rdfs:label "Quantitative range in percent" ;
+  rdfs:label "Percent range" ;
   rdfs:subClassOf data:QuantitativeRange ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -136,7 +136,7 @@ data:PercentRange
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:uncertainty ;
     ] ;
-  skos:definition "Class to encapsulate quantitative range in percent values" ;
+  skos:definition "Class to encapsulate a quantitative range expressed as in percent values" ;
 .
 data:QuantitativeMeasure
   a owl:Class ;
@@ -161,7 +161,7 @@ data:QuantitativeMeasure
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:uncertainty ;
     ] ;
-  skos:definition "Class to encapsulate quantitative measure values" ;
+  skos:definition "Class to encapsulate a quantitative measure value" ;
 .
 data:QuantitativeRange
   a owl:Class ;
@@ -186,11 +186,11 @@ data:QuantitativeRange
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:uncertainty ;
     ] ;
-  skos:definition "Class to encapsulate quantitative range values" ;
+  skos:definition "Class to encapsulate a quantitative range " ;
 .
 data:Text
   a owl:Class ;
-  rdfs:label "text" ;
+  rdfs:label "Text" ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom xsd:string ;
@@ -201,43 +201,49 @@ data:Text
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty data:value ;
     ] ;
-  skos:definition "Class to encapsulate text values" ;
+  skos:definition "Class to encapsulate a textual value" ;
 .
 data:max
   a owl:DatatypeProperty ;
-  rdfs:label "Maximum value of range" ;
+  rdfs:label "data maximum" ;
   rdfs:range xsd:decimal ;
   rdfs:subPropertyOf rdf:value ;
+  skos:definition "Maximum value of a range" ;
 .
 data:min
   a owl:DatatypeProperty ;
-  rdfs:label "Minimum value of range" ;
+  rdfs:label "data minimum" ;
   rdfs:range xsd:decimal ;
   rdfs:subPropertyOf rdf:value ;
+  skos:definition "Minimum value of range" ;
 .
 data:standard
   a owl:ObjectProperty ;
-  rdfs:label "Measurement standard, scale, uom, controlled vocabulary, taxonomy etc" ;
+  rdfs:label "data standard" ;
+  skos:definition "Measurement standard, scale, uom, reference system, controlled vocabulary, taxonomy etc" ;
 .
 data:uncertainty
   a owl:DatatypeProperty ;
-  rdfs:label "Uncertainty for quantitative values" ;
+  rdfs:label "data uncertainty" ;
   rdfs:range xsd:decimal ;
   rdfs:subPropertyOf rdf:value ;
+  skos:definition "Uncertainty for a quantitative value" ;
 .
 data:unit
   a owl:ObjectProperty ;
   rdfs:label "unit of measure" ;
   rdfs:subPropertyOf data:standard ;
+  skos:definition "Measurement scale " ;
 .
 data:value
   a owl:DatatypeProperty ;
-  rdfs:label "simple value (a literal)" ;
+  rdfs:label "data value" ;
   rdfs:subPropertyOf rdf:value ;
+  skos:definition "simple value (a literal)" ;
 .
 data:vocabulary
   a owl:ObjectProperty ;
-  rdfs:label "source vocabulary" ;
+  rdfs:label "vocabulary" ;
   rdfs:range [
       a owl:Class ;
       owl:unionOf (
@@ -247,4 +253,5 @@ data:vocabulary
         ) ;
     ] ;
   rdfs:subPropertyOf data:standard ;
+  skos:definition "controlled vocabulary, taxonomy etc " ;
 .
