@@ -36,7 +36,6 @@
 These may be used for observation results, or for the range of specific properties in other applications where scaled numbers, ranges, percents etc are required. """ ;
   dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
   dct:modified "2019-10-03"^^xsd:date ;
-  rdfs:comment "Datatype classes" ;
   rdfs:label "Datatypes" ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://topbraid.org/schema/> ;
