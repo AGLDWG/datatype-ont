@@ -1,0 +1,356 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : "xsd:integer",
+    "onProperty" : "data:value"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "owl:Restriction",
+    "hasValue" : "http://qudt.org/vocab/unit/PERCENT",
+    "onProperty" : "data:unit"
+  }, {
+    "@id" : "_:b10",
+    "@type" : "sdo:Person",
+    "affiliation" : "_:b11",
+    "email" : "simon.cox@csiro.au",
+    "identifier" : "https://orcid.org/0000-0002-3884-3420",
+    "mainEntityOfPage" : "https://people.csiro.au/C/S/simon-cox",
+    "name" : "Simon J.D.Cox"
+  }, {
+    "@id" : "_:b11",
+    "@type" : "sdo:Organization",
+    "identifier" : [ "https://ror.org/03qn8fb07", "http://catalogue.linked.data.gov.au/def/csiro" ],
+    "mainEntityOfPage" : "https://www.csiro.au/",
+    "name" : "CSIRO"
+  }, {
+    "@id" : "_:b12",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "data:value"
+  }, {
+    "@id" : "_:b14",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "data:value"
+  }, {
+    "@id" : "_:b15",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : "xsd:string",
+    "onProperty" : "data:value"
+  }, {
+    "@id" : "_:b16",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "rdf:value"
+  }, {
+    "@id" : "_:b17",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "data:vocabulary"
+  }, {
+    "@id" : "_:b18",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : "skos:Concept",
+    "onProperty" : "rdf:value"
+  }, {
+    "@id" : "_:b19",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "data:max"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "data:unit"
+  }, {
+    "@id" : "_:b20",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : "data:uncertainty"
+  }, {
+    "@id" : "_:b21",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "data:value"
+  }, {
+    "@id" : "_:b22",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "data:unit"
+  }, {
+    "@id" : "_:b23",
+    "@type" : [ "prov:Activity", "doap:Project" ],
+    "repository" : "https://github.com/AGLDWG/datatype-ont"
+  }, {
+    "@id" : "_:b24",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : "data:uncertainty"
+  }, {
+    "@id" : "_:b25",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "skos:ConceptScheme", "skos:Collection", "owl:Ontology" ]
+    }
+  }, {
+    "@id" : "_:b26",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : "xsd:boolean",
+    "onProperty" : "data:value"
+  }, {
+    "@id" : "_:b27",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : "data:uncertainty"
+  }, {
+    "@id" : "_:b28",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "data:value"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : "data:uncertainty"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : "xsd:decimal",
+    "onProperty" : "data:value"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "data:min"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : "data:uncertainty"
+  }, {
+    "@id" : "_:b9",
+    "@type" : "owl:Restriction",
+    "hasValue" : "http://qudt.org/vocab/unit/PERCENT",
+    "onProperty" : "data:unit"
+  }, {
+    "@id" : "http://linked.data.gov.au/def/datatype",
+    "@type" : "owl:Ontology",
+    "created" : "2019-03-25",
+    "creator" : "_:b10",
+    "description" : "A set of classes representing data-types. \r\nThese may be used for observation results, or for the range of specific properties in other applications where scaled numbers, ranges, percents etc are required. ",
+    "license" : "http://creativecommons.org/publicdomain/zero/1.0/",
+    "modified" : "2019-10-03",
+    "label" : "Datatypes",
+    "imports" : [ "http://usefulinc.com/ns/doap", "http://topbraid.org/schema/", "http://www.w3.org/ns/prov-o#", "http://purl.org/dc/elements/1.1/" ],
+    "historyNote" : "Originally developed for use as the value of an observation result (sosa:hasResult) in the context of the TERN-plot ontology. \r\n\r\nHowever, objects from these classes may appear in many contexts. ",
+    "wasGeneratedBy" : "_:b23"
+  }, {
+    "@id" : "data:Boolean",
+    "@type" : "owl:Class",
+    "label" : "Boolean",
+    "subClassOf" : [ "_:b28", "_:b26" ],
+    "definition" : "Class to encapsulate a true-or-false value"
+  }, {
+    "@id" : "data:Concept",
+    "@type" : "owl:Class",
+    "label" : "Concept",
+    "subClassOf" : [ "_:b16", "_:b17", "_:b18" ],
+    "definition" : "Class to encapsulate a classifier, usually a values from a controlled vocabulary"
+  }, {
+    "@id" : "data:Count",
+    "@type" : "owl:Class",
+    "label" : "Count",
+    "subClassOf" : [ "_:b24", "_:b12", "_:b0" ],
+    "definition" : "Class to encapsulate an integer value"
+  }, {
+    "@id" : "data:Percent",
+    "@type" : "owl:Class",
+    "label" : "Percent",
+    "subClassOf" : [ "_:b8", "_:b9", "data:QuantitativeMeasure" ],
+    "definition" : "Class to encapsulate a quantitative measure expressed as a percent value"
+  }, {
+    "@id" : "data:PercentRange",
+    "@type" : "owl:Class",
+    "label" : "Percent range",
+    "subClassOf" : [ "_:b27", "_:b1", "data:QuantitativeRange" ],
+    "definition" : "Class to encapsulate a quantitative range expressed as in percent values"
+  }, {
+    "@id" : "data:QuantitativeMeasure",
+    "@type" : "owl:Class",
+    "label" : "Quantitative Measure",
+    "subClassOf" : [ "_:b20", "_:b21", "_:b22", "_:b4" ],
+    "definition" : "Class to encapsulate a quantitative measure value"
+  }, {
+    "@id" : "data:QuantitativeRange",
+    "@type" : "owl:Class",
+    "label" : "Quantitative Range",
+    "subClassOf" : [ "_:b3", "_:b2", "_:b7", "_:b19" ],
+    "definition" : "Class to encapsulate a quantitative range "
+  }, {
+    "@id" : "data:Text",
+    "@type" : "owl:Class",
+    "label" : "Text",
+    "subClassOf" : [ "_:b14", "_:b15" ],
+    "definition" : "Class to encapsulate a textual value"
+  }, {
+    "@id" : "data:max",
+    "@type" : "owl:DatatypeProperty",
+    "label" : "data maximum",
+    "range" : "xsd:decimal",
+    "subPropertyOf" : "rdf:value",
+    "definition" : "Maximum value of a range"
+  }, {
+    "@id" : "data:min",
+    "@type" : "owl:DatatypeProperty",
+    "label" : "data minimum",
+    "range" : "xsd:decimal",
+    "subPropertyOf" : "rdf:value",
+    "definition" : "Minimum value of range"
+  }, {
+    "@id" : "data:standard",
+    "@type" : "owl:ObjectProperty",
+    "label" : "data standard",
+    "definition" : "Measurement standard, scale, uom, reference system, controlled vocabulary, taxonomy etc"
+  }, {
+    "@id" : "data:uncertainty",
+    "@type" : "owl:DatatypeProperty",
+    "label" : "data uncertainty",
+    "range" : "xsd:decimal",
+    "subPropertyOf" : "rdf:value",
+    "definition" : "Uncertainty for a quantitative value"
+  }, {
+    "@id" : "data:unit",
+    "@type" : "owl:ObjectProperty",
+    "label" : "unit of measure",
+    "subPropertyOf" : "data:standard",
+    "definition" : "Measurement scale "
+  }, {
+    "@id" : "data:value",
+    "@type" : "owl:DatatypeProperty",
+    "label" : "data value",
+    "subPropertyOf" : "rdf:value",
+    "definition" : "simple value (a literal)"
+  }, {
+    "@id" : "data:vocabulary",
+    "@type" : "owl:ObjectProperty",
+    "label" : "vocabulary",
+    "range" : "_:b25",
+    "subPropertyOf" : "data:standard",
+    "definition" : "controlled vocabulary, taxonomy etc "
+  } ],
+  "@context" : {
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
+    },
+    "allValuesFrom" : {
+      "@id" : "http://www.w3.org/2002/07/owl#allValuesFrom",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "definition" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+    },
+    "hasValue" : {
+      "@id" : "http://www.w3.org/2002/07/owl#hasValue",
+      "@type" : "@id"
+    },
+    "cardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#cardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "maxCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#maxCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "mainEntityOfPage" : {
+      "@id" : "http://schema.org/mainEntityOfPage",
+      "@type" : "@id"
+    },
+    "identifier" : {
+      "@id" : "http://schema.org/identifier",
+      "@type" : "@id"
+    },
+    "email" : {
+      "@id" : "http://schema.org/email"
+    },
+    "affiliation" : {
+      "@id" : "http://schema.org/affiliation",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "wasGeneratedBy" : {
+      "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "historyNote" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#historyNote"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "unionOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#unionOf",
+      "@type" : "@id"
+    },
+    "repository" : {
+      "@id" : "http://usefulinc.com/ns/doap#repository",
+      "@type" : "@id"
+    },
+    "data" : "http://linked.data.gov.au/def/datatype/",
+    "dct" : "http://purl.org/dc/terms/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "doap" : "http://usefulinc.com/ns/doap#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "prov" : "http://www.w3.org/ns/prov#",
+    "sdo" : "http://schema.org/"
+  }
+}
